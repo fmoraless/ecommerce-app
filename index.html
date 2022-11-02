@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce APP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header" class="header">
+    <div class="header-section container">
+        <!--#####################################################
+        ########################## NAV BAR ######################
+        #########################################################-->
+        <div class="logo">
+            <h1>ECOMMERCE</h1>
+        </div>
+        <div>
+            <span class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span>
+        </div>
+    </div>
+</header>
+
+        <!--#####################################################
+        ###################### LISTA PRODUCTOS ##################
+        #########################################################-->
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="/images/aceite_motor.jpg" alt="">
+                    <p><span>20</span>$</p>
+                </div>
+                <p class="title">Aceite Motor</p>
+                <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/bateria.png" alt="">
+                    <p><span>35</span>$</p>
+                </div>
+                <p class="title"> Batería</p>
+                <a href="" class="btn-add-cart" data-id="2">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/bicicleta.png" alt="">
+                    <p><span>15.50</span>$</p>
+                </div>
+                <p class="title"> Bicicleta</p>
+                <a href="" data-id="3" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/candado.png" alt="">
+                    <p><span>20.20</span>$</p>
+                </div>
+                <p class="title"> Candado</p>
+                <a href="" data-id="4" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/escaner_obd.png" alt="">
+                    <p><span>19</span>$</p>
+                </div>
+                <p class="title"> Escaner OBD-II</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/funda_asiento.png" alt="">
+                    <p><span>45</span>$</p>
+                </div>
+                <p class="title"> Funda asiento</p>
+                <a href="" data-id="6" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/aspiradora_auto.png" alt="">
+                    <p><span>23.99</span>$</p>
+                </div>
+                <p class="title"> Aspiradora auto</p>
+                <a href="" data-id="7" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/disco_freno.png" alt="">
+                    <p><span>50</span>$</p>
+                </div>
+                <p class="title"> Disco freno</p>
+                <a href="" data-id="8" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/filtro_polen.png" alt="">
+                    <p><span>16</span>$</p>
+                </div>
+                <p class="title"> Filtro Polen</p>
+                <a href="" data-id="9" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/thing.png" alt="">
+                    <p><span>17.50</span>$</p>
+                </div>
+                <p class="title"> Radio</p>
+                <a href="" data-id="10" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="/images/foco.png" alt="">
+                    <p><span>45</span>$</p>
+                </div>
+                <p class="title"> Foco</p>
+                <a href="" data-id="11" class="btn-add-cart">add to cart</a>
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="button button1">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+            </button>
+            <button class="button button2">
+                <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+        </div>
+
+        <!--#####################################################
+            ###################### Carrito ##########################
+            #########################################################-->
+        <div class="cart-products" id="products-id">
+            <h3>Mi carrito </h3>
+            <div class="card-items">
+                <div class="item">
+                    <h5>1. </h5>
+                    <img src="/images/disco_freno.png" alt="">
+                    <div class="item-content">
+                        <div>
+                            <h5>Nombre de producto</h5>
+                        </div>
+                    </div>
+                    <div class="item-content">
+
+                        <div>
+                            <h5 class="cart-price">$ 50.000</h5>
+                        </div>
+
+                    </div>
+                    <div class="item-content">
+
+                        <div>
+                            <h6>cant: 1</h6>
+                        </div>
+
+                    </div>
+
+                    <span><i class="fa-solid fa-trash"></i></span>
+                </div>
+
+                <div class="item">
+                    <h5>2. </h5>
+                    <img src="/images/aspiradora_auto.png" alt="">
+                    <div class="item-content">
+                        <div>
+                            <h5>Nombre de producto</h5>
+                        </div>
+                    </div>
+                    <div class="item-content">
+
+                        <div>
+                            <h5 class="cart-price">$ 40.000</h5>
+                        </div>
+
+                    </div>
+                    <div class="item-content">
+
+                        <div>
+                            <h6>cant: 1</h6>
+                        </div>
+
+                    </div>
+
+                    <span><i class="fa-solid fa-trash"></i></span>
+                </div>
+            </div>
+            <h2>Total: <strong class="price-total">$ 90.000</strong></h2>
+        </div>
+
+    </section>
+    <footer>
+
+    </footer>
+
+
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/66cca13e1b.js" crossorigin="anonymous"></script>
+</body>
+</html>
