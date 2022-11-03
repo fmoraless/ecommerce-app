@@ -1,65 +1,65 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "title": "Product 1",
     "price": 500,
-    "stock": 90,
-    "image": "https://picsum.photos/300?random=1"
+    "available_quantity": 90,
+    "thumbnail": "https://picsum.photos/300?random=1"
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "title": "Product 2",
     "price": 450,
-    "stock": 100,
-    "image": "https://picsum.photos/300?random=2"
+    "available_quantity": 100,
+    "thumbnail": "https://picsum.photos/300?random=2"
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "title": "Product 3",
     "price": 900,
-    "stock": 60,
-    "image": "https://picsum.photos/300?random=3"
+    "available_quantity": 60,
+    "thumbnail": "https://picsum.photos/300?random=3"
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "title": "Product 4",
     "price": 750,
-    "stock": 10,
-    "image": "https://picsum.photos/300?random=4"
+    "available_quantity": 10,
+    "thumbnail": "https://picsum.photos/300?random=4"
   },
   {
     "id": 5,
-    "name": "Product 5",
+    "title": "Product 5",
     "price": 2000,
-    "stock": 60,
-    "image": "https://picsum.photos/300?random=5"
+    "available_quantity": 60,
+    "thumbnail": "https://picsum.photos/300?random=5"
   },
   {
     "id": 6,
-    "name": "Product 6",
+    "title": "Product 6",
     "price": 2500,
-    "stock": 10,
-    "image": "https://picsum.photos/300?random=6"
+    "available_quantity": 10,
+    "thumbnail": "https://picsum.photos/300?random=6"
   },
   {
     "id": 7,
-    "name": "Product 7",
+    "title": "Product 7",
     "price": 5000,
-    "stock": 90,
-    "image": "https://picsum.photos/300?random=7"
+    "available_quantity": 90,
+    "thumbnail": "https://picsum.photos/300?random=7"
   },
   {
     "id": 8,
-    "name": "Product 8",
+    "title": "Product 8",
     "price": 3000,
-    "stock": 70,
-    "image": "https://picsum.photos/300?random=8"
+    "available_quantity": 70,
+    "thumbnail": "https://picsum.photos/300?random=8"
   },
   {
     "id": 9,
-    "name": "Product 9",
+    "title": "Product 9",
     "price": 1000,
-    "stock": 70,
-    "image": "https://picsum.photos/300?random=9"
+    "available_quantity": 70,
+    "thumbnail": "https://picsum.photos/300?random=9"
   }
 ]
