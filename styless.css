@@ -1,0 +1,54 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header.header {
+  box-sizing: border-box;
+  margin: 0;
+}
+dialog.modal {
+  background-color: antiquewhite;
+  box-sizing: border-box;
+  width: 90%;
+  padding: 0;
+  border: none;
+}
+dialog.modal::backdrop {
+  background-color: rgba(0 0 0 / 50%);
+}
+dialog.modal div.modal--header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: aqua;
+}
+dialog.modal div.modal--header h3 {
+  padding: 10px;
+}
+dialog.modal div.modal--header .modal--header--icon {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+dialog.modal .modal--content {
+  box-sizing: border-box;
+  width: 100%;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.card-items {
+  width: 100%;
+}
+section.card-items div.modal--total {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
