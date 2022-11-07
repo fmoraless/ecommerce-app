@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce APP</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styless.css">
+
 </head>
+
 <body>
     <header id="header" class="header">
-    <div class="header-section container">
-        <!--#####################################################
+        <div class="header-section container">
+            <!--#####################################################
         ########################## NAV BAR ######################
         #########################################################-->
-        <div class="logo">
-            <h1>ECOMMERCE</h1>
-        </div>
-        <div>
-            <span class="cart">
+            <div class="logo">
+                <h1>ECOMMERCE</h1>
+            </div>
+            <div class="cart-conatiner">
+                <span class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <sup class="count--cart"></sup>
             </span>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-        <!--#####################################################
+    <!--#####################################################
         ###################### LISTA PRODUCTOS ##################
         #########################################################-->
     <section class="container">
@@ -118,4 +123,5 @@
     <script src="https://kit.fontawesome.com/66cca13e1b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
+
 </html>
