@@ -80,6 +80,9 @@
             }
             variables.carrito.countCart.textContent = variables.carrito.data.length
         },
+        deleteCartProduct: function(product) {
+          console.log(product);
+        },
         renderCartProduct: function() {
             variables.carrito.contenedor = document.createElement("section")
             variables.carrito.contenedor.setAttribute('class', 'card-items')
@@ -112,6 +115,14 @@
                 variables.carrito.contenedor.itemConten.cantidad.setAttribute('class', 'item-content')
                 variables.carrito.contenedor.itemConten.cantidad.innerHTML = `<div><h6>cant: ${item.cantidad}</h6></div>`
                 variables.carrito.contenedor.item.append(variables.carrito.contenedor.itemConten.cantidad)
+                variables.carrito.contenedor.itemConten.trashContent = document.createElement("span")
+                variables.carrito.contenedor.itemConten.trash = document.createElement("i")
+                variables.carrito.contenedor.itemConten.trash.classList.add('fa-solid', 'fa-trash')
+                variables.carrito.contenedor.itemConten.trash.addEventListener("click", () => {
+                  this.deleteCartProduct(item)
+                })
+                variables.carrito.contenedor.itemConten.trashContent.append(variables.carrito.contenedor.itemConten.trash)
+                variables.carrito.contenedor.item.append(variables.carrito.contenedor.itemConten.trashContent)
 
                 variables.carrito.contenedor.append(variables.carrito.contenedor.item)
             })
