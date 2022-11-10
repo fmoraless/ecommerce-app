@@ -113,12 +113,12 @@ header{
     font-family: system-ui;
     text-decoration: none;
     background: #FF6200;
-    padding: 9px 23px;
+    padding: 10px 15px;
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    border-radius: 20px;
+    border-radius: 30px;
     transition: .3s;
     cursor: pointer;
 }
