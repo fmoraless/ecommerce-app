@@ -1,5 +1,12 @@
+import { metodosPaginacion, variablesPaginacion } from "./paginacion.js";
+
 // (() => {
-const variables = {
+ export const variables = {
+    fechts: {
+      url: "https://api.mercadolibre.com/sites/MLC/search",
+      page: 1,
+      q: 'libros'
+    },
     products: {
         state: null
     },
@@ -7,16 +14,21 @@ const variables = {
 
     },
     main: document.body,
+    productsContainer: document.getElementById("products-container"),
     carrito: {
         boton: document.querySelector('div.cart-conatiner'),
         data: [],
         countCart: document.querySelector('sup.count--cart')
     },
     page: 1,
+    btnNext: document.querySelector('#btnNext'),
+    btnBack: document.querySelector('#btnPrev')
 };
 let pagina = 1;
-const metodos = {
+export const metodos = {
     init: function() {
+        metodosPaginacion.init();
+
         document.addEventListener("DOMContentLoaded", () => {
             metodos.fetchProducts();
         });
@@ -245,21 +257,23 @@ const metodos = {
     fetchProducts: async() => {
         try {
             const response = await fetch("products.json");
-            const dataMeli = await axios.get(apiUrl, {
-                params: {
-                    q: "juguetes",
-                    limit: 10,
-                    offset: variables.page || pagina,
-                },
-            });
+            // const dataMeli = await axios.get(apiUrl, {
+            //     params: {
+            //         q: "juguetes",
+            //         limit: 10,
+            //         offset: variables.page || pagina,
+            //     },
+            // });
+            const dataMeli = await fetch(`${variables.fechts.url}?q=${variables.fechts.q}&offset=${variables.fechts.page}`);
+            const getDatameli = await dataMeli.json();
 
-            console.log(dataMeli, "dataMeli");
+            console.log(getDatameli, "dataMeli");
 
             const data = await response.json();
             console.log(data, "data");
 
             /* fusionar productos*/
-            const products = [...data, ...dataMeli.data.results];
+            const products = [...data, ...getDatameli.results];
 
             console.log(products, "MERGE products");
 
@@ -303,12 +317,13 @@ const metodos = {
             let elBoton = document.createElement("a");
             elBoton.classList.add("btn-add-cart");
             elBoton.setAttribute("dataid", id);
-            console.log(variables.carrito.data.find(item => item.id === div.id));
-            elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `add to cart 🛒 ${item.cantidad}` : "add to cart ";
+            // console.log(variables.carrito.data.find(item => item.id === div.id),'prueba');
+            // elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `add to cart 🛒 ${item.cantidad}` : "add to cart ";
+            elBoton.innerHTML = "add to cart ";
             elBoton.addEventListener("click", (e) => { metodos.setCartProduct(product, e) }, false)
             div.append(elBoton);
 
-            productsContainer.append(div);
+            variables.productsContainer.append(div);
         });
     }
 };
