@@ -67,7 +67,7 @@ export const metodos = {
         }
         if (action === 'renderModal') {
             variables.modal.dialog.showModal()
-            metodos.renderContentModal('carrito de productos')
+            metodos.renderContentModal('Lista De Compras')
         }
     },
     renderContentModal: function(title) {
@@ -202,7 +202,7 @@ export const metodos = {
             variables.carrito.data[element].cantidad--
                 if (variables.carrito.data[element].cantidad !== 0) {
                     // console.log(variables.carrito.data[element])
-                    metodos.renderContentModal('carrito de productos')
+                    metodos.renderContentModal('Lista De Compras')
                     document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`
                         // this.setCartProduct(variables.carrito.data[element])
                         // document.querySelector(`h6[data="${id}"]`).textContent = variables.carrito.data[element].cantidad
@@ -213,7 +213,7 @@ export const metodos = {
                     document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart`
                     variables.carrito.data = variables.carrito.data.filter((ele, index) => index !== parseInt(element))
                         // metodos.renderCartProduct()
-                    metodos.renderContentModal('carrito de productos')
+                    metodos.renderContentModal('Lista De Compras')
                     variables.carrito.countCart.textContent = variables.carrito.data.length === 0 ? '' : variables.carrito.data.length
 
 
@@ -231,7 +231,7 @@ export const metodos = {
                 // this.setCartProduct(variables.carrito.data[element])
             document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`
 
-            metodos.renderContentModal('carrito de productos')
+            metodos.renderContentModal('Lista De Compras')
 
             // document.querySelector(`h6[data="${id}"]`).textContent = variables.carrito.data[element].cantidad
             // document.querySelector(`h4[data="${id}"].cart-price`).textContent = variables.carrito.data[element].cantidad * variables.carrito.data[element].price
@@ -245,7 +245,7 @@ export const metodos = {
             document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart`
             variables.carrito.data = variables.carrito.data.filter((ele, index) => index !== parseInt(element))
                 // metodos.renderCartProduct()
-            metodos.renderContentModal('carrito de productos')
+            metodos.renderContentModal('Lista De Compras')
             variables.carrito.countCart.textContent = variables.carrito.data.length === 0 ? '' : variables.carrito.data.length
 
         }
