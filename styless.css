@@ -38,6 +38,7 @@ dialog.modal div.modal--header .modal--header--icon {
   font-weight: 900;
   text-transform: uppercase;
   color: red;
+  transition: .3s;
 }
 dialog.modal div.modal--header .modal--header--icon:hover {
   background-color: white;
@@ -65,4 +66,7 @@ section.card-items div.modal--total {
   font-size: 2rem;
   font-weight: 500;
   background: #3a8d8d;
+}
+span.btn{
+  cursor: pointer;
 }

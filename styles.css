@@ -51,6 +51,7 @@ header{
 }
 .cart i {
     font-size: 1.5em;
+    cursor: pointer;
 }
 .cart-products{
     /*position: absolute!important;
