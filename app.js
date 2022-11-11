@@ -94,13 +94,13 @@ export const metodos = {
       variables.carrito.data[prev--];
       document.querySelector(
         `a[dataid="${product.id}"]`
-      ).innerHTML = `add to cart 🛒 ${variables.carrito.data[prev].cantidad}`;
+      ).innerHTML = `añadir al carrito 🛒 ${variables.carrito.data[prev].cantidad}`;
     } else {
       console.log("esta", dataa);
       dataa.cantidad++;
       document.querySelector(
         `a[dataid="${product.id}"]`
-      ).innerHTML = `add to cart 🛒 ${dataa.cantidad}`;
+      ).innerHTML = `añadir al carrito 🛒 ${dataa.cantidad}`;
     }
     variables.carrito.countCart.textContent = variables.carrito.data.length;
   },
@@ -279,7 +279,7 @@ export const metodos = {
         metodos.renderContentModal("Lista De Compras");
         document.querySelector(
           `a[dataid="${variables.carrito.data[element].id}"]`
-        ).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`;
+        ).innerHTML = `añadir al carrito 🛒 ${variables.carrito.data[element].cantidad}`;
         // this.setCartProduct(variables.carrito.data[element])
         // document.querySelector(`h6[data="${id}"]`).textContent = variables.carrito.data[element].cantidad
         // document.querySelector(`h4[data="${id}"].cart-price`).textContent = variables.carrito.data[element].cantidad * variables.carrito.data[element].price
@@ -287,7 +287,7 @@ export const metodos = {
         // variables.carrito.data.delete(element)
         document.querySelector(
           `a[dataid="${variables.carrito.data[element].id}"]`
-        ).innerHTML = `add to cart`;
+        ).innerHTML = `añadir al carrito`;
         variables.carrito.data = variables.carrito.data.filter(
           (ele, index) => index !== parseInt(element)
         );
@@ -313,7 +313,7 @@ export const metodos = {
       // this.setCartProduct(variables.carrito.data[element])
       document.querySelector(
         `a[dataid="${variables.carrito.data[element].id}"]`
-      ).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`;
+      ).innerHTML = `añadir al carrito 🛒 ${variables.carrito.data[element].cantidad}`;
 
       metodos.renderContentModal("Lista De Compras");
 
@@ -325,7 +325,7 @@ export const metodos = {
     if (action === "borrar") {
       document.querySelector(
         `a[dataid="${variables.carrito.data[element].id}"]`
-      ).innerHTML = `add to cart`;
+      ).innerHTML = `añadir al carrito`;
       variables.carrito.data = variables.carrito.data.filter(
         (ele, index) => index !== parseInt(element)
       );
@@ -407,8 +407,8 @@ export const metodos = {
       elBoton.classList.add("btn-add-cart");
       elBoton.setAttribute("dataid", id);
       // console.log(variables.carrito.data.find(item => item.id === div.id),'prueba');
-      // elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `add to cart 🛒 ${item.cantidad}` : "add to cart ";
-      elBoton.innerHTML = "add to cart ";
+      // elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `añadir al carrito 🛒 ${item.cantidad}` : "añadir al carrito ";
+      elBoton.innerHTML = "añadir al carrito ";
       elBoton.addEventListener(
         "click",
         (e) => {
