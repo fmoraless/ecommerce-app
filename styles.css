@@ -189,10 +189,11 @@ p.close-btn{
 }
 
 .button1 {
-    border-radius: 12px;
     background-color: gray; /*  */
 }
 
+.button1, 
 .button2 {
     border-radius: 12px;
+    font-weight: 600;
 }
