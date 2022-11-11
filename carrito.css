@@ -22,3 +22,15 @@ dialog.modal .item-content{
     align-items: center;
     gap: 10px;
 }
+
+dialog.modal .item-content h5{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.total{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 1rem;
+}
