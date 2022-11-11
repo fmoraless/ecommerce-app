@@ -85,11 +85,11 @@ export const metodos = {
             let prev = variables.carrito.data.push({...product, cantidad: 1 })
                 // console.log(variables.carrito.data[prev--])
             variables.carrito.data[prev--]
-            document.querySelector(`a[dataid="${product.id}"]`).innerHTML = `add to cart 🛒 ${variables.carrito.data[prev].cantidad}`
+            document.querySelector(`a[dataid="${product.id}"]`).innerHTML = `Añadir al Carrito 🛒 ${variables.carrito.data[prev].cantidad}`
         } else {
             console.log('esta', dataa)
             dataa.cantidad++
-                document.querySelector(`a[dataid="${product.id}"]`).innerHTML = `add to cart 🛒 ${dataa.cantidad}`
+                document.querySelector(`a[dataid="${product.id}"]`).innerHTML = `Añadir al Carrito 🛒 ${dataa.cantidad}`
 
 
         }
@@ -203,14 +203,14 @@ export const metodos = {
                 if (variables.carrito.data[element].cantidad !== 0) {
                     // console.log(variables.carrito.data[element])
                     metodos.renderContentModal('Lista De Compras')
-                    document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`
+                    document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `Añadir al Carrito 🛒 ${variables.carrito.data[element].cantidad}`
                         // this.setCartProduct(variables.carrito.data[element])
                         // document.querySelector(`h6[data="${id}"]`).textContent = variables.carrito.data[element].cantidad
                         // document.querySelector(`h4[data="${id}"].cart-price`).textContent = variables.carrito.data[element].cantidad * variables.carrito.data[element].price
 
                 } else {
                     // variables.carrito.data.delete(element)
-                    document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart`
+                    document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `Añadir al Carrito`
                     variables.carrito.data = variables.carrito.data.filter((ele, index) => index !== parseInt(element))
                         // metodos.renderCartProduct()
                     metodos.renderContentModal('Lista De Compras')
@@ -229,7 +229,7 @@ export const metodos = {
             variables.carrito.data[element].cantidad++
                 console.log(variables.carrito.data[element])
                 // this.setCartProduct(variables.carrito.data[element])
-            document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart 🛒 ${variables.carrito.data[element].cantidad}`
+            document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `Añadir al Carrito 🛒 ${variables.carrito.data[element].cantidad}`
 
             metodos.renderContentModal('Lista De Compras')
 
@@ -242,7 +242,7 @@ export const metodos = {
 
         }
         if (action === 'borrar') {
-            document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `add to cart`
+            document.querySelector(`a[dataid="${variables.carrito.data[element].id}"]`).innerHTML = `Añadir al Carrito`
             variables.carrito.data = variables.carrito.data.filter((ele, index) => index !== parseInt(element))
                 // metodos.renderCartProduct()
             metodos.renderContentModal('Lista De Compras')
@@ -318,8 +318,8 @@ export const metodos = {
             elBoton.classList.add("btn-add-cart");
             elBoton.setAttribute("dataid", id);
             // console.log(variables.carrito.data.find(item => item.id === div.id),'prueba');
-            // elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `add to cart 🛒 ${item.cantidad}` : "add to cart ";
-            elBoton.innerHTML = "add to cart ";
+            // elBoton.innerHTML = variables.carrito.data.find(item => item.id === div.id) ? `Añadir al Carrito 🛒 ${item.cantidad}` : "Añadir al Carrito ";
+            elBoton.innerHTML = "Añadir al Carrito ";
             elBoton.addEventListener("click", (e) => { metodos.setCartProduct(product, e) }, false)
             div.append(elBoton);
 
@@ -345,7 +345,7 @@ const apiUrl = "https://api.mercadolibre.com/sites/MLC/search";
           <p><span>20</span>$</p>
       </div>
       <p class="title">Aceite Motor</p>
-      <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+      <a href="" data-id="1" class="btn-add-cart">Añadir al Carrito</a>
   </div>
 *
 *
