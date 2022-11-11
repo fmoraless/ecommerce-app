@@ -1,0 +1,75 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header.header {
+  box-sizing: border-box;
+  margin: 0;
+}
+dialog.modal {
+  background-color: antiquewhite;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0;
+  border: none;
+}
+dialog.modal::backdrop {
+  background-color: rgba(0 0 0 / 50%);
+}
+dialog.modal div.modal--header {
+  width: 100%;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: #3a8d8d;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+dialog.modal div.modal--header h3 {
+  padding: 1rem;
+}
+dialog.modal div.modal--header .modal--header--icon {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: red;
+  flex: 1;
+  text-align: right;
+  margin-right: 1rem;
+
+}
+dialog.modal div.modal--header .modal--header--icon:hover {
+  /*background-color: white;*/
+  border-radius: 5px;
+}
+dialog.modal .modal--content {
+  box-sizing: border-box;
+  width: 100%;
+  background: rgb(236, 232, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.card-items {
+  width: 100%;
+}
+section.card-items div.modal--total {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+    justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  background: #3a8d8d;
+}
+span.btn{
+  cursor: pointer;
+}
