@@ -24,6 +24,7 @@ export const variables = {
 };
 let pagina = 1;
 export const metodos = {
+
   init: function () {
     metodosPaginacion.init();
 
@@ -274,6 +275,7 @@ export const metodos = {
       variables.carrito.data[element].cantidad--;
       if (variables.carrito.data[element].cantidad !== 0) {
         // console.log(variables.carrito.data[element])
+ add_cart_modal_styles
         metodos.renderContentModal("Lista De Compras");
         document.querySelector(
           `a[dataid="${variables.carrito.data[element].id}"]`
@@ -435,7 +437,7 @@ const apiUrl = "https://api.mercadolibre.com/sites/MLC/search";
           <p><span>20</span>$</p>
       </div>
       <p class="title">Aceite Motor</p>
-      <a href="" data-id="1" class="btn-add-cart">add to cart</a>
+      <a href="" data-id="1" class="btn-add-cart">Añadir al Carrito</a>
   </div>
 *
 *
